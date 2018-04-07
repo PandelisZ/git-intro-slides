@@ -12,27 +12,23 @@ html(lang="en")
     script(src="/public/revealjs-diagram.js")
     script.
       var treeData = {
-        name: 'root',
-        x0: window.diagram.height / 2,
-        y0: 0,
-        children: []
+      name: 'Initial Commit',
+      x0: window.diagram.height / 2,
+      y0: 0,
+      children: []
       };
 
       var _transitions = [
-        window.diagram.addItem('child 1', 'root', treeData),
-        window.diagram.addItem('child 2', 'root', treeData),
-        window.diagram.addItem('sub-child 1', 'child 1', treeData),
-        window.diagram.addItem('sub-child 2', 'child 1', treeData),
+        window.diagram.addItem('Add some content', 'Initial Commit', treeData),
+        window.diagram.addItem('Make it look nice', 'Add some content', treeData),
+        window.diagram.addItem('Fix a bug', 'Make it look nice', treeData)
       ];
 
       var _inverse_transitions = [
-        window.diagram.removeItem('child 1', treeData),
-        window.diagram.removeItem('child 2', treeData),
-        window.diagram.removeItem('sub-child 1', treeData),
-        window.diagram.removeItem('sub-child 2', treeData),
+        window.diagram.removeItem('Add some content', treeData),
       ];
 
-      // start the tree
-      window.diagram.register('basic', function() {
+      // register the diagram
+      window.diagram.register('intro', function() {
         window.diagram.init(treeData);
       });

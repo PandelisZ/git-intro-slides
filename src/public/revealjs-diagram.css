@@ -2,8 +2,8 @@
   cursor: pointer; }
 
 .node rect {
-  fill: #333333;
-  stroke: #f6a821;
+  fill: #d36d00;
+  stroke: #d36d00;
   stroke-width: 1.5px; }
 
 .node text {
@@ -12,5 +12,5 @@
 
 .link, .link-alone {
   fill: none;
-  stroke: #f6a821;
+  stroke: #1f1f1f;
   stroke-width: 1.5px; }
