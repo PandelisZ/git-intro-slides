@@ -5,7 +5,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 module.exports = {
   entry: './src/script.js',
   output: {
-    path: path.resolve(__dirname, 'build') // Output folder
+    path: path.resolve(__dirname, 'build'), // Output folder
+    filename: 'script.js',
   },
   mode: 'none',
   module: {
@@ -27,13 +28,17 @@ module.exports = {
   },
   plugins: [
     // Extract our css to a seperate css file
-    new ExtractTextPlugin('css/styles.css'),
+    new ExtractTextPlugin('styles.css'),
     // Use HTMLWebpackPLugin with template set to our pug template.
     new HTMLWebpackPlugin({
       template: `./src/index.pug`
-    })
-    // new CopyWebpackPlugin([
-    //   { from: '**/*', ignore: [ '*.pug' ], context: 'src' }
-    // ])
+    }),
+    new HTMLWebpackPlugin({
+      filename: 'diagrams/example.html',
+      template: `./src/diagrams/example.pug`
+    }),
+    new CopyWebpackPlugin([
+      { from: 'public/*', ignore: [ '*.pug' ], context: 'src' }
+    ])
   ]
 }

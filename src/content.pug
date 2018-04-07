@@ -1,3 +1,25 @@
-section|
-  button(class='button-cta') Hello
-section slide2
+- yellow='rgba(252, 243, 174, 0.3)'
+- yellow2='rgb(252, 243, 175)'
+section(data-background=yellow)|
+  .columns.is-vcentered
+    .column.is-half
+      img(src='https://avatars2.githubusercontent.com/u/8436717?s=460&v=4')
+    .column.is-half.project
+      .is-left.has-text-left(style=`background-color:${yellow2}; padding: 20px;`)
+        h3 Pandelis Zembashis
+        div.is-size-5
+          p 🚩 GitHub Campus Expert
+          p 🛩 Birmingham, UK
+          p 💻 Avid hacker and tinkerer
+          p 🔨 FullStack developer
+          p 👨‍🎓 Computer Science Student
+section
+  h2 What we're going to talk about
+  ul
+    li.fragment Why versioning is needed
+    li.fragment The theory behind how git works
+    li.fragment A CLI walkthrough
+    li.fragment Collaborative website example using GitHub flow
+section(class="fig-container",
+        data-fig-id="fig-diagram1",
+        data-file="/diagrams/example.html")
