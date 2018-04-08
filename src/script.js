@@ -10,7 +10,7 @@ window.Reveal.initialize({
   history: true,
   dependencies: [
     // d3.js library and plugin
-    { src: 'https://d3js.org/d3.v4.min.js' },
+    { src: '/public/d3.v3.min.js' },
     { src: '/public/d3js.js' }
   ]
 })
