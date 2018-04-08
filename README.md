@@ -10,6 +10,8 @@ Feel free to tinker or adapt these slides to run your own workshops!
 This repository is available as MIT but an attribution would be nice.
 You can contact me through the issues if you need help or advice.
 
+✨ [View the slides](https://pandelisz.github.io/git-intro-slides/#/) ✨
+
 ## Credits:
 
 - [explain-git-with-d3](https://github.com/onlywei/explain-git-with-d3) - The wicked interactive git commit slide
