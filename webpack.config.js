@@ -38,7 +38,8 @@ let config = {
       template: `./src/index.pug`
     }),
     new CopyWebpackPlugin([
-      { from: 'public/**/*', ignore: [ '*.pug' ], context: 'src' }
+      { from: 'public/**/*', ignore: [ '*.pug' ], context: 'src' },
+      { from: 'd3git/**/*' }
     ])
   ]
 }

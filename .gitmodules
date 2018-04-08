@@ -1,0 +1,3 @@
+[submodule "d3git"]
+	path = d3git
+	url = git@github.com:onlywei/explain-git-with-d3.git
