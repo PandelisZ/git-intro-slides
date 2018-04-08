@@ -1,0 +1,21 @@
+<!DOCTYPE html><!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>Document</title><link rel="stylesheet" href="/public/revealjs-diagram.css"><link href="../styles.css" rel="stylesheet"></head><body><script src="https://d3js.org/d3.v3.min.js"></script><script src="https://code.jquery.com/jquery-3.2.1.min.js"></script><script src="/public/revealjs-diagram.js"></script><script>var treeData = {
+name: 'Initial Commit',
+x0: window.diagram.height / 2,
+y0: 0,
+children: []
+};
+
+var _transitions = [
+  window.diagram.addItem('Add some content', 'Initial Commit', treeData),
+  window.diagram.addItem('Make it look nice', 'Add some content', treeData),
+  window.diagram.addItem('Fix a bug', 'Make it look nice', treeData)
+];
+
+var _inverse_transitions = [
+  window.diagram.removeItem('Add some content', treeData),
+];
+
+// register the diagram
+window.diagram.register('intro', function() {
+  window.diagram.init(treeData);
+});</script><script type="text/javascript" src="../script.js"></script></body></html>
