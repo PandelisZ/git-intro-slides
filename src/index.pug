@@ -5,10 +5,13 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     link(rel="stylesheet", href="style.css")
-    title Git Intro 
+    title Git Intro Workshop | @PandelisZ 
   body
     .reveal
       .slides
         include content.pug
+    #hidden(style='display:none;')
+      #header
+        #header-left @PandelisZ
     script(src="public/reveal.js")
     script(src="script.js")

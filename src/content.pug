@@ -92,7 +92,31 @@ section
       img(src="/public/img/twitter.png", alt="")
     .column
       img(src="/public/img/apple.png", alt="")
+section
+  h1 Getting into Git
+  img(src="/public/img/git-icon.png", alt="")
+section
+  h4 Distributed Workflows
+  img(src="public/img/centralized_workflow.png")
+section
+  h4 The 3 stages
+  img(src="public/img/areas.png", alt="")
+section
+  h4 The lifecycle
+  img(src="public/img/lifecycle.png", alt="")
+section
+  h4 The basics
+  pre
+    code(data-trim,data-noescape).
+      git init - Initialise new git
 
+      git clone username@host:/path/to/repository - Clone from server
+
+      git add * - add all files that are untracked
+
+      git commit -m "Commit message" - commit a staged file
+      
+      git push origin master - push committed file to remote server
 section(class="fig-container",
         data-fig-id="fig-diagram1",
-        data-file="/diagrams/example.html")
+        data-file="/diagrams/commits.html")

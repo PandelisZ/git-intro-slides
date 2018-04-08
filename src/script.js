@@ -14,3 +14,12 @@ window.Reveal.initialize({
     { src: '/public/d3js.js' }
   ]
 })
+
+let header = document.getElementById('header')
+if (window.location.search.match(/print-pdf/gi)) {
+  window.Reveal.addEventListener('ready', function (event) {
+    document.querySelector('.slide-background').append(header)
+  })
+} else {
+  document.querySelector('div.reveal').append(header)
+}

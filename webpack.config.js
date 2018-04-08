@@ -3,6 +3,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const GhPagesWebpackPlugin = require('gh-pages-webpack-plugin')
+const glob = require('glob')
 const randomEmoji = require('random-emoji')
 
 let config = {
@@ -36,10 +37,6 @@ let config = {
     new HTMLWebpackPlugin({
       template: `./src/index.pug`
     }),
-    new HTMLWebpackPlugin({
-      filename: 'diagrams/example.html',
-      template: `./src/diagrams/example.pug`
-    }),
     new CopyWebpackPlugin([
       { from: 'public/**/*', ignore: [ '*.pug' ], context: 'src' }
     ])
@@ -48,6 +45,11 @@ let config = {
 
 function setup(env) {
   //Publish to github with webpack --env.publish
+
+  if (!env) {
+    env = {}
+  }
+
   if (env.publish) {
     emojis = randomEmoji.random({count: 2})
     config.plugins.push(
@@ -59,6 +61,15 @@ function setup(env) {
     })
     )
   }
+
+  //Export anything in diagrams to the appropriate URL in output
+  glob.sync(`${__dirname}/src/diagrams/*.?(pug|jade)`).forEach((item) => {
+    config.plugins.push(
+      new HTMLWebpackPlugin({
+        filename: `diagrams/${path.basename(item, path.extname(item))}.html`,
+        template: item
+      }))
+  });
 
   return config
 }
