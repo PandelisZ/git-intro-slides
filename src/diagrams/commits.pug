@@ -7,8 +7,7 @@ html(lang="en")
     title Document
     link(rel="stylesheet", href="/public/revealjs-diagram.css")
   body
-    script(src="https://d3js.org/d3.v3.min.js")
-    script(src="https://code.jquery.com/jquery-3.2.1.min.js")
+    script(src="/public/d3.v3.min.js")
     script(src="/public/revealjs-diagram.js")
     script.
       var treeData = {
@@ -19,13 +18,19 @@ html(lang="en")
       };
 
       var _transitions = [
-        window.diagram.addItem('Add some content', 'Initial Commit', treeData),
-        window.diagram.addItem('Make it look nice', 'Add some content', treeData),
-        window.diagram.addItem('Fix a bug', 'Make it look nice', treeData)
+        window.diagram.addItem('Create project files', 'Initial Commit', treeData),
+        window.diagram.addItem('Add a new feature', 'Create project files', treeData),
+        window.diagram.addItem('Change the UI', 'Add a new feature', treeData),
+        window.diagram.addItem('Fix a bug in the UI', 'Change the UI', treeData),
+        window.diagram.addItem('...', 'Fix a bug in the UI', treeData)
       ];
 
       var _inverse_transitions = [
-        window.diagram.removeItem('Add some content', treeData),
+        window.diagram.removeItem('Create project files', treeData),
+        window.diagram.removeItem('Add a new feature', treeData),
+        window.diagram.removeItem('Change the UI', treeData),
+        window.diagram.removeItem('Fix a bug in the UI', treeData),
+        window.diagram.removeItem('...', treeData)
       ];
 
       // register the diagram

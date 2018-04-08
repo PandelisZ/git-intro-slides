@@ -12,14 +12,11 @@
   var diagonal = d3.svg.diagonal()
     .projection(function(d) { return [d.y, d.x]; });
 
-
-  $('document').ready(function() {
-
+  document.addEventListener('DOMContentLoaded', () => {
     Object.keys(registered).forEach(function (k) {
       registered[k].cb();
     });
-
-  });
+  }, false);
 
   var registered = {};
   function register(name, cb) {
@@ -99,7 +96,7 @@
       .style({
         'font-size': '20px'
       })
-      .text(function (d) {return d.name.toUpperCase()});
+      .text(function (d) {return d.name });
 
     // Transition nodes to their new position.
     var nodeUpdate = node.transition()
