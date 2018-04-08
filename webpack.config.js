@@ -38,7 +38,7 @@ module.exports = {
       template: `./src/diagrams/example.pug`
     }),
     new CopyWebpackPlugin([
-      { from: 'public/*', ignore: [ '*.pug' ], context: 'src' }
+      { from: 'public/**/*', ignore: [ '*.pug' ], context: 'src' }
     ])
   ]
 }
