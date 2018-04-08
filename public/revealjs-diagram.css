@@ -2,8 +2,7 @@
   cursor: pointer; }
 
 .node rect {
-  fill: #d36d00;
-  stroke: #d36d00;
+  fill: #00a738;
   stroke-width: 1.5px; }
 
 .node text {

@@ -1,0 +1,27 @@
+<!DOCTYPE html><!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>Document</title><link rel="stylesheet" href="/public/revealjs-diagram.css"><link href="../styles.css" rel="stylesheet"></head><body><script src="/public/d3.v3.min.js"></script><script src="/public/revealjs-diagram.js"></script><script>var treeData = {
+name: 'Initial Commit',
+x0: window.diagram.height / 2,
+y0: 0,
+children: []
+};
+
+var _transitions = [
+  window.diagram.addItem('Create project files', 'Initial Commit', treeData),
+  window.diagram.addItem('Add a new feature', 'Create project files', treeData),
+  window.diagram.addItem('Change the UI', 'Add a new feature', treeData),
+  window.diagram.addItem('Fix a bug in the UI', 'Change the UI', treeData),
+  window.diagram.addItem('...', 'Fix a bug in the UI', treeData)
+];
+
+var _inverse_transitions = [
+  window.diagram.removeItem('Create project files', treeData),
+  window.diagram.removeItem('Add a new feature', treeData),
+  window.diagram.removeItem('Change the UI', treeData),
+  window.diagram.removeItem('Fix a bug in the UI', treeData),
+  window.diagram.removeItem('...', treeData)
+];
+
+// register the diagram
+window.diagram.register('intro', function() {
+  window.diagram.init(treeData);
+});</script><script type="text/javascript" src="../script.js"></script></body></html>
