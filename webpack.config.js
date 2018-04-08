@@ -2,7 +2,10 @@ const path = require('path')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-module.exports = {
+const GhPagesWebpackPlugin = require('gh-pages-webpack-plugin')
+const randomEmoji = require('random-emoji')
+
+let config = {
   entry: './src/script.js',
   output: {
     path: path.resolve(__dirname, 'build'), // Output folder
@@ -42,3 +45,24 @@ module.exports = {
     ])
   ]
 }
+
+function setup(env) {
+  //Publish to github with webpack --env.publish
+  if (env.publish) {
+    emojis = randomEmoji.random({count: 2})
+    config.plugins.push(
+      new GhPagesWebpackPlugin({
+        path: `${__dirname}/build`,
+        options: {
+            message: `Updating published slides ${emojis[0].character}${emojis[1].character}`,
+        }
+    })
+    )
+  }
+
+  return config
+}
+
+
+
+module.exports = setup
