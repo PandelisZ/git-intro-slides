@@ -17,3 +17,4 @@ You can contact me through the issues if you need help or advice.
 - [reveal.js](https://github.com/hakimel/reveal.js/) - A framework for easily creating beautiful presentations using HTML
 - [explain-git-with-d3](https://github.com/onlywei/explain-git-with-d3) - Used for the wicked interactive git commit slide
 - [Pro Git](https://git-scm.com/book/en/v2) - [centralized_workflow](src/public/img/centralized_workflow.png), [lifecycle](src/public/img/lifecycle.png), [areas](src/public/img/areas.png)
+- [Glitch Community](https://community.glitch.me) - The colour scheme
