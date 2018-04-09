@@ -1,6 +1,12 @@
 - yellow='rgba(252, 243, 174, 0.3)'
 - yellow2='rgb(252, 243, 175)'
-section(data-background=yellow)|
+- orange='rgba(255, 209, 198, 0.3)'
+- orange2='rgb(255, 209, 198)'
+- blue='rgba(162, 193, 255, 0.5)'
+- blue2='rgb(163, 196, 253)'
+- teal='rgb(49, 205, 212)'
+- pink='rgb(255, 163, 187)'
+section(data-background=yellow)
   .columns.is-vcentered
     .column.is-half
       img(src='https://avatars2.githubusercontent.com/u/8436717?s=460&v=4')
@@ -13,7 +19,7 @@ section(data-background=yellow)|
           p 💻 Avid hacker and tinkerer
           p 🔨 FullStack developer
           p 👨‍🎓 Computer Science Student
-section
+section(data-background=orange)
   h2 What we're going to talk about
   ul
     li.fragment(data-fragment-index="1") The problem we're trying to solve ✅
@@ -21,17 +27,17 @@ section
     li.fragment(data-fragment-index="3") A CLI walkthrough 🔥
     li.fragment(data-fragment-index="4") Collaborative website example using GitHub flow ✅
     li.fragment(data-fragment-index="5") *Questions tips and tricks 🔥🔨
-section
+section(data-background=blue)
   h1 The problem
   h2.fragment 👉 Sharing
-section
+section(data-background=blue)
   h1 Sharing Code 💻
-section
+section(data-background=blue)
   h1 Sharing Ideas 💡
-section
+section(data-background=blue)
   h1 Collaborating 👩‍💻 👨‍💻
   h3.fragment Rejecting what doesn't work ❌
-section
+section(data-background=teal)
   h3 Methods to collaborate
   ul
     li Email
@@ -42,17 +48,18 @@ section
     li Paper? 
     li Verbally??
     li Serial brain interface???
-section
+section(data-background=teal)
   h2 Not good enough
-section
+section(data-background=yellow)
   h2 What is required for effective collaboration
-  p Source of truth
-  p History of changes
-  p Method to accept or reject changes
-  p.fragment *Simple
-section
+  ul
+    li Source of truth
+    li History of changes
+    li Method to accept or reject changes
+    li.fragment *Simple
+section(data-background=yellow)
   h1 How does Git help us achieve effective <span class="is-size-3">(and sane)</span> collaboration
-section
+section(data-background=orange)
   h2 A Git primer
   .columns.is-vcentered
     .column.is-half
@@ -62,7 +69,7 @@ section
         u
           strong technology.
         | Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
-section
+section(data-background=orange)
   h2 GitHub !== Git <span class="is-size-3">(But it's quite close)</span>
   .columns.is-vcentered
     .column.is-one-third
@@ -72,7 +79,7 @@ section
        strong hosting service 
        | for version control using Git.
       p It makes Git as easy to use as any website and has many extra features designed to improve how people collaborate.
-section
+section(data-background=orange)
   h2 Git is used allot
   .columns.is-centered.is-vcentered
     .column

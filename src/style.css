@@ -21,3 +21,11 @@
 .slide-background {
   padding: 50px 0 !important;
 }
+
+li {
+  list-style-type:none;
+}
+
+li::before {
+  content: '👉 '
+}
