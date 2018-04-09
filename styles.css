@@ -10738,6 +10738,14 @@ label.panel-block:hover {
 .slide-background {
   padding: 50px 0 !important;
 }
+
+li {
+  list-style-type:none;
+}
+
+li::before {
+  content: '\1F449   '
+}
 /*!
  * reveal.js
  * http://revealjs.com
