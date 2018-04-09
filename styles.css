@@ -10734,6 +10734,10 @@ label.panel-block:hover {
     bottom: 0%;
     left: 0%;
 }
+
+.slide-background {
+  padding: 50px 0 !important;
+}
 /*!
  * reveal.js
  * http://revealjs.com
